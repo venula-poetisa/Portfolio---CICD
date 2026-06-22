@@ -1,0 +1,221 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    background-color: #FCE0F3;
+    color: #4A2C2A;
+    line-height: 1.7;
+}
+
+#header {
+    background-color: #5D2E1F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#header a {
+    text-decoration: none;
+    color: #FCE0F3;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+#header a:hover #intro {
+    text-align: center;
+    padding: 120px 20px;
+}
+#contact{
+    display:flex;
+    gap:20px;
+}
+
+#contact a{
+    color:#FCE0F3;
+    font-size:24px;
+    transition:all 0.3s ease;
+}
+
+#contact a:hover{
+    color:#FFD6E8;
+    transform:translateY(-3px);
+}
+#intro {
+    text-align: center;
+    padding-top: 8%;
+}
+#intro h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#intro p {
+    max-width: 700px;
+    margin: auto;
+}
+
+#intro a {
+    display: inline-block;
+    margin-top: 25px;
+    background-color: #5D2E1F;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+#about,
+#edu,
+#exp,
+#skills,
+#projects {
+    padding: 70px 80px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contentbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+#aboutmecontent {
+    flex: 2;
+}
+
+#aboutmepic {
+    flex: 1;
+    text-align: center;
+}
+
+#aboutmepic img {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+#edu ul,
+#exp ul,
+#skills ul {
+    max-width: 900px;
+    margin: auto;
+}
+
+#skills {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#skills #skillsbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10%;
+}
+
+#cardcontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.cards {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.cards:hover {
+    transform: translateY(-8px);
+}
+
+.cards img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cards h3 {
+    margin-top: 0;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dark {
+    background-color: #241919;
+    color: #F8EAF3;
+}
+
+.dark .cards {
+    background-color: #3B2A2A;
+}
+
+.dark #skills {
+    background-color: #2A1C1C;
+}
+
+.dark a {
+    color: #FFD6E8;
+}
+
+#themeBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background-color: #5D2E1F;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media(max-width:768px) {
+
+    #header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #about,
+    #edu,
+    #exp,
+    #skills,
+    #projects {
+        padding: 40px 20px;
+    }
+
+    #intro h1 {
+        font-size: 2rem;
+    }
+}
