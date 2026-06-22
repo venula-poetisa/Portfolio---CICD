@@ -1,0 +1,25 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify HTML File Exists
+        run: test -f index.html
+
+      - name: Verify CSS File Exists
+        run: test -f style.css
+
+      - name: Verify JavaScript File Exists
+        run: test -f script.js
+
+      - name: Success Message
+        run: echo "Portfolio validated"
